@@ -1,0 +1,80 @@
+{
+  "embeds": {
+    "main": {
+      "footer": "Music Bot",
+      "footerIcon": "",
+      "timestamp": false
+    },
+    "error": {
+      "title": "ERROR",
+      "timestamp": false
+    }
+  },
+  "errors": {
+    "voiceChannel": "You must be in a voice channel to do this!",
+    "noPerm": "No permission!",
+    "nothingPlaying": "Nothing playing",
+    "queue": "The queue may not exceed %queue%!"
+  },
+  "help": {
+    "title": "Command Usage",
+    "description": "-music <option>`",
+    "usage": "**-music play <query/link>** : *Plays music*\n\n**-music stop** : *Stops all music and clears the queue*\n\n**-music pause** : *Pauses music*\n\n**-music resume** : *Resumes the music*\n\n**-music playing** : *Displays the currently playing song*\n\n**-music skip** : *Skips a song in the queue*\n\n**-music volume** : *Sets the music volume*\n\n**-music queue** : *Displays the queue*\n\n**-music remove [number]** : *Removes a song from the queue*\n\n**-music lyrics [song name]** : *Pulls up the lyrics for a song, or the lyrics for the currently playing song*\n\n**-music loop** : *Loops the currently playing song*",
+    "footer": "Music Bot"
+  },
+  "music": {
+    "queue": {
+      "title": "Queue",
+      "end": "End of queue",
+      "noQueue": "Nothing in the queue"
+    },
+    "volume": {
+      "title": "🎵 Volume Changed",
+      "description": "The volume has been set to %percent%%"
+    },
+    "search": {
+      "hidden": false,
+      "title": "🔍 Searching",
+      "description": "Searching for `%search%`"
+    },
+    "stop": {
+      "title": "Music stopped and queue cleared.",
+      "description": ""
+    },
+    "pause": {
+      "title": "",
+      "description": "⏸️ Music paused"
+    },
+    "resume": {
+      "title": "",
+      "description": "⏯️ Music resumed"
+    },
+    "skip": {
+      "end": {
+        "title": "You have reached the end of the queue!",
+        "description": "To stop the music, run -music stop"
+      }
+    },
+    "loop": {
+      "start": {
+        "title": "Song Looped",
+        "description": "[%song%](%url%) will now loop"
+      },
+      "end": {
+        "title": "Loop Stopped",
+        "description": "[%song%](%url%) will no longer loop"
+      }
+    },
+    "lyrics": {
+      "search": {
+        "hidden": false,
+        "title": "🔍 Searching",
+        "description": "Searching for lyrics for `%search%`"
+      }
+    },
+    "remove": {
+      "title": "Song Removed",
+      "description": "[%song%](%url%) has been removed from the queue"
+    }
+  }
+}

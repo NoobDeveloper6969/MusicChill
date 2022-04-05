@@ -1,0 +1,1 @@
+const e=require(process.cwd()+"/utils/helpers.js"),s=require(process.cwd()+"/config/conf.json");exports.run=((s,o,r)=>{e.sendHelp(o)}),module.exports.info={name:"help",aliases:s.commands.help.aliases};

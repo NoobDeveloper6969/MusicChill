@@ -1,0 +1,95 @@
+{
+  "token": "",
+  "prefix": "-",
+  "removeCommandMsg": false,
+  "activity": {
+    "message": "to music",
+    "type": "LISTENING"
+  },
+  "embeds": {
+    "main": {
+      "embedColor": "B187E7"
+    },
+    "error": {
+      "embedColor": "FF7F7F"
+    }
+  },
+  "commands": {
+    "useMusicCommand": true,
+    "removeCommandMsg": true,
+    "music": {
+      "aliases": []
+    },
+    "help": {
+      "aliases": []
+    },
+    "loop": {
+      "aliases": []
+    },
+    "lyrics": {
+      "aliases": []
+    },
+    "pause": {
+      "aliases": []
+    },
+    "playing": {
+      "aliases": []
+    },
+    "play": {
+      "aliases": []
+    },
+    "queue": {
+      "aliases": []
+    },
+    "remove": {
+      "aliases": []
+    },
+    "resume": {
+      "aliases": []
+    },
+    "skip": {
+      "aliases": []
+    },
+    "stop": {
+      "aliases": []
+    },
+    "volume": {
+      "aliases": []
+    }
+  },
+  "youtube": {
+    "api": {
+      "key": ""
+    }
+  },
+  "genius": {
+    "api": {
+      "token": "",
+      "baseUrl": "https://api.genius.com/"
+    }
+  },
+  "serverSpecificSettings": [
+    {
+      "id": "Guild 1 ID",
+      "dj": {
+        "enabled": true,
+        "role": "Guild 1 dj role"
+      }
+    },
+	{
+      "id": "Guild 2 ID",
+      "dj": {
+        "enabled": true,
+        "role": "Guild 2 dj role"
+      }
+    }
+  ],
+  "music": {
+    "videoBuffer": 5,
+    "maxQueue": 0,
+    "maxVolume": 100,
+    "playingBar": {
+      "enabled": true
+    }
+  }
+}

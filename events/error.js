@@ -1,0 +1,1 @@
+module.exports=((o,e)=>{console.log(e)});

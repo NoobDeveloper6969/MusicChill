@@ -1,0 +1,8 @@
+/*==================================================================
+@preserve
+For information regarding installation, please refer to the README.html
+If you would like any additions/modifications, feel free to contact me directly.
+
+Do not redistribute!
+====================================================================*/
+const e=require("discord.js"),o=require("chalk"),n=require("path"),s=require("fs");function t(e){console.log(o.red(e)),process.exit(1)}console.log(o.yellow("Starting bot..."));try{require(process.cwd()+"/config/conf.json"),require(process.cwd()+"/config/messages.json")}catch(e){console.log(e.message),t("Invalid config file(s)! The bot will not start.")}const l=require(process.cwd()+"/config/conf.json");l.token||t("Missing bot token! Remember to change the token in the config.");let r=new e.Client({restRequestTimeout:3e4,retryLimit:2});r.commands=new e.Collection,s.readdir(n.join(__dirname,"/commands"),(e,n)=>{e&&console.log(e),console.log(o.yellow("Loading commands..."));let s=n.filter(e=>"js"===e.split(".").pop());s.length<=0?console.log(o.red("No commands were found!")):s.forEach(e=>{let n=require(process.cwd()+`/commands/${e}`);console.log(o.green(`Attempting to load: ${e}`)),r.commands.set(n.info.name,n)})}),s.readdir(n.join(__dirname,"/events"),(e,n)=>{e&&console.log(e),console.log(o.yellow("Loading events..."));let s=n.filter(e=>"js"===e.split(".").pop());s.length<=0?console.log(o.red("No events were found!")):s.forEach(e=>{console.log(o.green(`Attempting to load: ${e}`)),r.on(e.split(".")[0],require(process.cwd()+`/events/${e}`).bind(null,r))})}),r.login(l.token).catch(e=>t("Please make sure you have the correct token set in the config file."));
